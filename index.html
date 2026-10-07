@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>云计算与分布式系统 实验二 | 云环境下的服务器环境搭建</title>
+  <meta name="description" content="云计算与分布式系统课程实验二：在 GitHub Pages 上发布静态站点，验证 Web 服务的可访问性。">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="masthead">
+    <p class="kicker">云计算与分布式系统 · 实验二</p>
+    <h1>云环境下的服务器环境搭建</h1>
+    <p class="lede">
+      本页面由 GitHub Pages 托管发布，用于验证一个最简单的静态 Web 服务
+      能否通过公网地址正常访问。
+    </p>
+    <p class="status"><span class="dot" aria-hidden="true"></span>站点状态：已发布并可访问</p>
+  </header>
+
+  <main>
+    <section class="panel">
+      <h2>实验信息</h2>
+      <dl class="meta">
+        <div class="row"><dt>课程</dt><dd>云计算与分布式系统</dd></div>
+        <div class="row"><dt>实验</dt><dd>实验二 云环境下的服务器环境搭建</dd></div>
+        <div class="row"><dt>托管平台</dt><dd>GitHub Pages</dd></div>
+        <div class="row"><dt>站点类型</dt><dd>静态站点（HTML + CSS）</dd></div>
+        <div class="row"><dt>发布日期</dt><dd id="publish-date">2026-10-07</dd></div>
+      </dl>
+    </section>
+
+    <section class="panel">
+      <h2>实验说明</h2>
+      <p>
+        实验中选取 GitHub 作为云环境。GitHub 仓库保存站点源文件，每次向指定分支推送提交后，
+        GitHub Pages 会自动拉取最新内容并分发到全球 CDN 节点，对外提供 HTTPS 访问，
+        无需自行购买域名、配置服务器或申请证书。
+      </p>
+      <p>
+        页面只用到了 HTML 与 CSS，属于纯静态内容，因此无需后端运行时与数据库，
+        这也是本实验选择静态托管方案的主要原因。
+      </p>
+    </section>
+
+    <section class="panel">
+      <h2>访问结果</h2>
+      <ul class="checklist">
+        <li><span class="tick" aria-hidden="true">✓</span>站点文件已提交至 GitHub 仓库</li>
+        <li><span class="tick" aria-hidden="true">✓</span>已开启 GitHub Pages 并指定发布分支</li>
+        <li><span class="tick" aria-hidden="true">✓</span>公网地址返回 HTTP 200，页面内容与本地一致</li>
+        <li><span class="tick" aria-hidden="true">✓</span>已启用 HTTPS，浏览器显示安全连接</li>
+      </ul>
+      <p class="hint">页面最后渲染时间：<span id="render-time">—</span></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>云计算与分布式系统 · 实验二 · GitHub Pages 静态站点</p>
+  </footer>
+
+  <script>
+    document.getElementById("render-time").textContent = new Date().toLocaleString("zh-CN");
+  </script>
+</body>
+</html>
